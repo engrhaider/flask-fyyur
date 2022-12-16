@@ -9,5 +9,5 @@ DEBUG = True
 # Connect to the database
 
 
-# TODO IMPLEMENT DATABASE URL
-SQLALCHEMY_DATABASE_URI = '<Put your local database url>'
+# get the database url from the environment variable set in the docker-compose for the web container
+SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
